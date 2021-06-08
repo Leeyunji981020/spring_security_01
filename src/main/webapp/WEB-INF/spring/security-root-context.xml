@@ -9,6 +9,7 @@
    <http> 
            <intercept-url pattern="/security/all" access="permitAll" />
       <intercept-url pattern="/security/member" access="hasRole('ROLE_MEMBER')" /> 
+         <intercept-url pattern="/security/admin" access="hasRole('ROLE_ADMIN')" />
       <form-login />
    </http> 
    
@@ -19,7 +20,7 @@
        <!-- {noop}member : 암호화 안시키겟다 - 패스워드 적용 안시킴 -->
        
          <user name="member" password="{noop}member" authorities="ROLE_MEMBER" /> 
-		<user name="manager" password="{noop}manager" authorities="ROLE_MEMBER" />       
+		<user name="admin" password="{noop}admin" authorities="ROLE_MEMBER,ROLE_ADMIN" />       
        </user-service> 
      </authentication-provider> 
    </authentication-manager>
