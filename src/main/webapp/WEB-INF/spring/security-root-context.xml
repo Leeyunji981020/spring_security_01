@@ -14,7 +14,14 @@
    
    <!-- provider --> 
    <authentication-manager>
-
+	   <authentication-provider> 
+       <user-service> 
+       <!-- {noop}member : 암호화 안시키겟다 - 패스워드 적용 안시킴 -->
+       
+         <user name="member" password="{noop}member" authorities="ROLE_MEMBER" /> 
+		<user name="manager" password="{noop}manager" authorities="ROLE_MEMBER" />       
+       </user-service> 
+     </authentication-provider> 
    </authentication-manager>
 
 </beans:beans>
