@@ -11,6 +11,8 @@
       <intercept-url pattern="/security/member" access="hasRole('ROLE_MEMBER')" /> 
          <intercept-url pattern="/security/admin" access="hasRole('ROLE_ADMIN')" />
       <form-login />
+            <!-- 403 에러 처리 --> <!-- error-page에는 해당 url을 적어준다.(controller에서 확인) -->
+        <access-denied-handler error-page="/security/accessError"/>
    </http> 
    
    <!-- provider --> 
