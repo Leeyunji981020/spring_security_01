@@ -32,6 +32,9 @@
    <beans:bean id="customNoOpPasswordEncoder"
       class="edu.bit.ex.security.CustomNoOpPasswordEncoder" />
   <beans:bean id="bcryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" />
+     
+     <beans:bean id="customNoOpPasswordEncoder"
+      class="edu.bit.ex.security.EmpDetailsService" />
    
    <!-- provider -->
    <authentication-manager>

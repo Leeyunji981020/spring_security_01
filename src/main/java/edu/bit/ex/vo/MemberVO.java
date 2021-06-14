@@ -3,6 +3,7 @@ package edu.bit.ex.vo;
 import java.security.Principal;
 import java.text.DateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 import org.slf4j.Logger;
@@ -25,13 +26,11 @@ import lombok.extern.log4j.Log4j;
 @Setter
 @AllArgsConstructor
 @ToString
-public class UserVO {
+public class MemberVO {
 	private String username;
 	private String password;
-	  private int enabled;
+	private String enabled;
 
-	public UserVO() {
-		this("user","1111",1);
-	}
-   
+	private List<AuthVO> authList;
+
 }

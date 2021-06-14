@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import lombok.extern.log4j.Log4j;
@@ -24,14 +25,12 @@ import lombok.extern.log4j.Log4j;
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 @ToString
-public class UserVO {
+public class AuthVO {
+	
 	private String username;
-	private String password;
-	  private int enabled;
+	private String authority;
 
-	public UserVO() {
-		this("user","1111",1);
-	}
-   
+	
 }
