@@ -7,6 +7,8 @@
    
    
      <http auto-config="true" use-expressions="true">
+     <csrf disabled = "true"/>
+     
  <!--        <intercept-url pattern="/restful/**" access="permitAll" /> -->
 <!--       <intercept-url pattern="/restful/write" access="hasAnyRole('USER, ADMIN')" /> -->
         <intercept-url pattern="/login/loginForm" access="permitAll" />

@@ -48,7 +48,7 @@ public class HomeController {
 	@GetMapping("/login/loginForm")
 	public String loginForm() {
 		logger.info("Welcome Login Form");
-		return "login/loginForm2";
+		return "login/loginForm";
 	}
 	
 	@GetMapping("/user/userHome")
