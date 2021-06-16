@@ -5,6 +5,7 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,4 +30,10 @@ public interface UserMapper {
 
 	   @Insert("insert into AUTHORITIES (username,AUTHORITY) values(#{username},'ROLE_USER')")
 	   public void insertAuthorities(UserVO UserVO);
+	   
+	   @Delete("delete from users")
+	   public void deleteUsers();
+	   
+	   @Delete("delete from AUTHORITIES")
+	   public void deleteAuthorities();
 }
